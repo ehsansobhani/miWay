@@ -503,17 +503,20 @@ if use_route_lines and not route_paths_df.empty:
 # Vehicles
 layers.append(
     pdk.Layer(
-        "ScatterplotLayer",
-        df,
-        get_position="[lon, lat]",
-        # get_radius=55 if fancy_mode else 40,
-        get_fill_color="color",
-        get_line_color=[0, 0, 0],
-        line_width_min_pixels=1,
-        opacity=0.95,
-        pickable=True,
-    )
+    "ScatterplotLayer",
+    df,
+    get_position="[lon, lat]",
+    get_radius=7,              # <-- IMPORTANT: make points visible
+    radius_units="meters",      # <-- IMPORTANT: stable sizing
+    get_fill_color="color",
+    get_line_color=[0, 0, 0],
+    line_width_min_pixels=1,        
+    opacity=0.95,
+    pickable=True,        
 )
+)
+
+
 
 # Labels (fancy)
 # if fancy_mode:
