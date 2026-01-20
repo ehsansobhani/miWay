@@ -1,0 +1,5 @@
+streamlit
+streamlit-autorefresh
+# plus any other libs your script uses
+gtfs-realtime-bindings
+protobuf
