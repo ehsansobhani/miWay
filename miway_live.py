@@ -23,6 +23,27 @@ import pydeck as pdk
 from streamlit_autorefresh import st_autorefresh
 from google.transit import gtfs_realtime_pb2
 
+import streamlit as st
+
+st.set_page_config(layout="wide")
+
+st.markdown(
+    """
+    <style>
+    /* Hide Streamlit header */
+    header {visibility: hidden;}
+
+    /* Hide footer */
+    footer {visibility: hidden;}
+
+    /* Remove top padding */
+    .block-container {
+        padding-top: 0rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # -----------------------------
 # MiWay config
