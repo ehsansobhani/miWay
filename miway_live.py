@@ -29,6 +29,33 @@ st.set_page_config(layout="wide")
 st.markdown(
     """
     <style>
+    .badge-mask {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 260px;
+        height: 120px;
+        background: #ffffff;
+        z-index: 999999;
+        pointer-events: none;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 12px;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: #333;
+    }
+    </style>
+
+    <div class="badge-mask">MiWay Live</div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <style>
     /* --- Kill ALL Streamlit Cloud floating badges/decoration --- */
 
     /* 1) Hide Streamlit's floating decoration container (new + old builds) */
