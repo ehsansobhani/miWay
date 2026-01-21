@@ -26,6 +26,42 @@ from google.transit import gtfs_realtime_pb2
 import streamlit as st
 
 st.set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+    /* --- Kill ALL Streamlit Cloud floating badges/decoration --- */
+
+    /* 1) Hide Streamlit's floating decoration container (new + old builds) */
+    [data-testid="stDecoration"],
+    [data-testid="stAppDecoration"],
+    [data-testid="stToolbar"],
+    [data-testid="stStatusWidget"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+    }
+
+    /* 2) Hide any fixed bottom-right elements Streamlit injects */
+    div[style*="position: fixed"][style*="bottom: 0"][style*="right: 0"] {
+        display: none !important;
+    }
+
+    /* 3) Hide any streamlit.io marketing links/badges */
+    a[href*="streamlit.io"],
+    a[href*="share.streamlit.io"] {
+        display: none !important;
+    }
+
+    /* 4) Hide footer + remove extra padding */
+    footer {display: none !important;}
+    .block-container {padding-bottom: 0rem !important; padding-top: 0rem !important;}
+
+    /* 5) Hide header space if present */
+    header {display: none !important;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown(
     """
