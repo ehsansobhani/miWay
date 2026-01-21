@@ -45,6 +45,33 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <style>
+    /* --- Hide Streamlit Cloud bottom-right branding --- */
+    a[href*="streamlit.io"] {
+        display: none !important;
+    }
+
+    /* Hide 'Hosted with Streamlit' badge */
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
+
+    /* Hide footer completely */
+    footer {
+        display: none !important;
+    }
+
+    /* Remove extra bottom padding */
+    .block-container {
+        padding-bottom: 0rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # -----------------------------
 # MiWay config
 # -----------------------------
