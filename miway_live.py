@@ -26,32 +26,6 @@ from google.transit import gtfs_realtime_pb2
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.markdown(
-    """
-    <style>
-    .badge-mask {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        width: 260px;
-        height: 120px;
-        background: #ffffff;
-        z-index: 999999;
-        pointer-events: none;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 12px;
-        font-family: Arial, sans-serif;
-        font-weight: 700;
-        color: #333;
-    }
-    </style>
-
-    <div class="badge-mask">MiWay Live</div>
-    """,
-    unsafe_allow_html=True
-)
 
 st.markdown(
     """
@@ -494,7 +468,7 @@ def compute_online_metrics(df: pd.DataFrame) -> dict:
 # Streamlit app (fancy demo)
 # -----------------------------
 st.set_page_config(layout="wide")
-st.title(f"Live {AGENCY_NAME} Vehicles — Route, Delay, Headway")
+st.title(f"Live {AGENCY_NAME} Vehicles — Route")
 
 # Faster refresh for demo animation
 st_autorefresh(interval=5_000, key="refresh")
